@@ -74,3 +74,4 @@ df_stats = df_stats.round(2)
 # Output statistics
 print(df_stats)
 print(df_stats.to_markdown(mode="github"))
+print("Columns:", df.columns)

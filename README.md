@@ -9,6 +9,7 @@ This repo contains a copy of ASAP dataset for essay scoring converted into a bet
 - Uniform **labels** across all prompts are added.
 - **Min** and **Max** scores are added.
 - Converted to **'.parquet'**.
+- Merged with **normalized** version of `ASAP++` dataset.
 
 ## Dataset Overview
 
@@ -23,6 +24,8 @@ This repo contains a copy of ASAP dataset for essay scoring converted into a bet
 |  6 | 7        | Narrative   |    1569 |       169.44 |            5 |          592 |               0.54 |
 |  7 | 8        | Narrative   |     723 |       612.49 |            4 |          904 |               0.62 |
 |  8 | Total    |             |   12976 |       254.29 |            2 |         1119 |               0.58 |
+
+Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_score', 'label', 'narrativity', 'language', 'prompt_adherence', 'conventions', 'sentence_fluency', 'word_choice', 'organization', 'content']`
 
 ## Usage
 
@@ -43,6 +46,36 @@ ASAP dataset:
     publisher = {Kaggle},
     year = {2012},
     url = {https://kaggle.com/competitions/asap-aes}
+}
+```
+
+ASAP++ dataset:
+
+```
+@inproceedings{mathias-bhattacharyya-2018-asap,
+    title = "{ASAP}++: Enriching the {ASAP} Automated Essay Grading Dataset with Essay Attribute Scores",
+    author = "Mathias, Sandeep  and
+      Bhattacharyya, Pushpak",
+    editor = "Calzolari, Nicoletta  and
+      Choukri, Khalid  and
+      Cieri, Christopher  and
+      Declerck, Thierry  and
+      Goggi, Sara  and
+      Hasida, Koiti  and
+      Isahara, Hitoshi  and
+      Maegaard, Bente  and
+      Mariani, Joseph  and
+      Mazo, H{\'e}l{\`e}ne  and
+      Moreno, Asuncion  and
+      Odijk, Jan  and
+      Piperidis, Stelios  and
+      Tokunaga, Takenobu",
+    booktitle = "Proceedings of the Eleventh International Conference on Language Resources and Evaluation ({LREC} 2018)",
+    month = may,
+    year = "2018",
+    address = "Miyazaki, Japan",
+    publisher = "European Language Resources Association (ELRA)",
+    url = "https://aclanthology.org/L18-1187",
 }
 ```
 
