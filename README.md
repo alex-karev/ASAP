@@ -5,11 +5,12 @@ This repo contains a copy of ASAP dataset for essay scoring converted into a bet
 ## Features
 
 - **Reorganized** and **cleaned** from unnecessary data.
-- **Normalized** scores and added.
+- **Normalized** scores.
 - Uniform **labels** across all prompts are added.
 - **Min** and **Max** scores are added.
 - Converted to **'.parquet'**.
 - Merged with **normalized** version of `ASAP++` dataset.
+- Rubrics, prompt texts and sources were manually extracted from `*.docx` and `*.xlsx`.
 
 ## Dataset Overview
 
