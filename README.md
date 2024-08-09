@@ -32,7 +32,10 @@ Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_scor
 - `ASAP.parquet` contains the processed dataset.
 - `convert.py` for processing the dataset.
 - `analyze.py` generates a table in "Dataset Overview" section.
+- `descriptions.json` contain prompts, rubrics, sources and score ranges for each prompt.
 - `descriptions/` contains rubrics and descriptions from the original dataset.
+- `*.md` files in `descriptions/` contain rubrics, prompts and sources extracted from `*.docx` and `.xlsx` documents. In `rubrics.md`, all text directly referencing particular score point is removed.
+- `generate_descriptions.py` generates `descriptions.json`.
 - `original/` contains the original dataset
 
 ## References
