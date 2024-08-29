@@ -37,7 +37,44 @@ Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_scor
 - `descriptions/` contains rubrics and descriptions from the original dataset.
 - `*.md` files in `descriptions/` contain rubrics, prompts and sources extracted from `*.docx` and `.xlsx` documents. In `rubrics.md`, all text directly referencing particular score point is removed.
 - `generate_descriptions.py` generates `descriptions.json`.
+- `linguistic_features.parquet` contains linguistic feature analysis for each text in `ASAP.parquet` (see description below).
+- `generate_linguistic_features.py` generates `linguistic_features.parquet` from `ASAP.parquet`.
 - `original/` contains the original dataset
+
+## Linguistic features
+
+`linguistic_features.parquet` contains the analysis for the following linguistic features in all texts:
+
+|Column|Description|
+|---|---|
+|id|Text id in `ASAP.parquet`|
+|chars|Character Count|
+|words|Word Count|
+|4sqrt_words|Fourth Root of Word Count|
+|avg_word_len|Average Word Length|
+|words_gr5|Word Count > 5 Char|
+|words_gr6|Word Count > 6 Char|
+|words_gr7|Word Count > 7 Char|
+|words_gr8|Word Count > 8 Char|
+|diff_words|Difficult Word Count|
+|long_words|Long Word Count|
+|spell_err|Spelling Errors|
+|uniq_words|Unique Word Count|
+|nouns|Noun Count|
+|verbs|Verb Count|
+|adj|Adjective Count|
+|adv|Adverb Count|
+|stop_words|Stop Words Count|
+|sentences|Sentence Count|
+|avg_sentence_len|Average Sentence Length|
+|exclamations|Exclamation Mark Count|
+|questions|Question Mark Count|
+|commas|Comma Count|
+|avg_syllables|Average Syllables Per Word|
+|poly_syllable|Polysyllablic Words|
+|flesch|Flesch Reading Ease|
+|gunning_fog|Gunning Fog|
+|smog|Smog Index|
 
 ## References
 
