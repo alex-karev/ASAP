@@ -29,6 +29,8 @@ This repo contains a copy of ASAP dataset for essay scoring converted into a bet
 
 Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_score', 'label', 'narrativity', 'language', 'prompt_adherence', 'conventions', 'sentence_fluency', 'word_choice', 'organization', 'content']`
 
+![Feature correlation matrix](https://github.com/alex-karev/ASAP/raw/main/assets/asap.png)
+
 ## Usage
 
 - `ASAP.parquet` contains the processed dataset.
@@ -76,6 +78,8 @@ Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_scor
 |flesch|Flesch Reading Ease|
 |gunning_fog|Gunning Fog|
 |smog|Smog Index|
+
+![Linguistic feature correlation matrix](https://github.com/alex-karev/ASAP/raw/main/assets/linguistic_features.png)
 
 ## References
 

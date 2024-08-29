@@ -1,5 +1,6 @@
 #/usr/bin/python
 import pandas as pd
+import matplotlib.pyplot as plt
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk import pos_tag, download
@@ -255,3 +256,11 @@ save_path = "linguistic_features.parquet"
 df_stat.to_parquet(save_path)
 print("Saved to '{}'.".format(save_path))
 
+# Plot correlation matrix
+matrix = df_stat.corr()
+labels = [x for x in matrix.columns]
+plt.imshow(matrix, cmap="Blues")
+plt.colorbar()
+plt.xticks(range(len(matrix)), labels, rotation=45, ha="right")
+plt.yticks(range(len(matrix)), labels)
+plt.show()

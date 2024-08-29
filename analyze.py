@@ -1,4 +1,5 @@
 #!/usr/bin/python
+import matplotlib.pyplot as plt
 import pandas as pd
 import os
 import sys
@@ -75,3 +76,12 @@ df_stats = df_stats.round(2)
 print(df_stats)
 print(df_stats.to_markdown(mode="github"))
 print("Columns:", df.columns)
+
+# Plot correlation matrix
+matrix = df.drop("text", axis=1).corr()
+labels = [x for x in matrix.columns]
+plt.imshow(matrix, cmap="Blues")
+plt.colorbar()
+plt.xticks(range(len(matrix)), labels, rotation=45, ha="right")
+plt.yticks(range(len(matrix)), labels)
+plt.show()
