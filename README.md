@@ -10,7 +10,8 @@ This repo contains a copy of ASAP dataset for essay scoring converted into a bet
 - **Min** and **Max** scores are added.
 - Converted to **'.parquet'**.
 - Merged with **normalized** version of `ASAP++` dataset.
-- Rubrics, prompt texts and sources were manually extracted from `*.docx` and `*.xlsx`.
+- **Rubrics**, **prompt texts** and **sources** were manually extracted from `*.docx` and `*.xlsx`.
+- **Linguistic feature** analysis for all texts in the dataset.
 
 ## Dataset Overview
 
@@ -41,7 +42,7 @@ Columns: `['id', 'text', 'prompt', 'score', 'min_score', 'max_score', 'norm_scor
 - `generate_linguistic_features.py` generates `linguistic_features.parquet` from `ASAP.parquet`.
 - `original/` contains the original dataset
 
-## Linguistic features
+## Linguistic Features
 
 `linguistic_features.parquet` contains the analysis for the following linguistic features in all texts:
 
